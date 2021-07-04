@@ -34,7 +34,7 @@ const messageReducer = (state, action) => {
       groupIndex = groupsCopy.findIndex(group => group.groupname === groupname)
       let newGroup = {
         ...groupsCopy[groupIndex],
-        messages: groupsCopy[groupIndex].messages
+        messages: groupsCopy[groupIndex]?.messages
           ? [message, ...groupsCopy[groupIndex].messages]
           : null
       }
